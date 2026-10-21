@@ -1,0 +1,83 @@
+/*
+ * Hagalaz — dark fantasy / evil-castle theme (ᚺ)
+ * Ash-black, bone, iron and blood red.
+ * Derived from the Hagalaz-Dotfiles README.
+ */
+
+:root {
+    /* ---------- Core palette ---------- */
+    --bg: #0a0807; /* ash black, base background */
+    --bg-darker: #040302;
+    --bg-dark: #070605;
+    --bg-lighter: #14100e; /* soot: bars, notifications */
+
+    --iron: #2e2724; /* borders, selection, frames */
+    --selection: var(--iron);
+    --border: var(--iron);
+    --muted: #6b635c; /* comments, placeholders (= color8) */
+
+    --fg: #d5cbbb; /* bone, body text */
+    --fg-dark: #867d73;
+    --fg-light: #e3dacb;
+    --fg-bright: #efe8dc;
+
+    /* ---------- Accent (blood red) ---------- */
+    --accent: #c1121f; /* primary accent, active border start */
+    --accent-tail: #5a0d10; /* dried blood, active border gradient end */
+    --accent-gradient: linear-gradient(45deg, var(--accent), var(--accent-tail));
+
+    /* ---------- Terminal colors (color0–color15) ---------- */
+    --color0: #0a0807;
+    --color1: #b8323a; /* muted blood red, urgent/error */
+    --color2: #7d8a68; /* sage */
+    --color3: #a8956a; /* dusty gold */
+    --color4: #6f7f8c; /* grey-blue */
+    --color5: #8c6a76; /* dusty mauve */
+    --color6: #6f8c88; /* muted teal */
+    --color7: #c4bcae;
+    --color8: #6b635c; /* = muted */
+    --color9: #d4474d;
+    --color10: #9aa886;
+    --color11: #c9b98a;
+    --color12: #8fa0ae;
+    --color13: #ad8b97;
+    --color14: #8fadaa;
+    --color15: #efe8dc;
+
+    /* ---------- Semantic aliases ---------- */
+    --danger: var(--color1);
+    --danger-bright: var(--color9);
+    --success: var(--color2);
+    --warning: var(--color3);
+    --info: var(--color4);
+    --link: var(--color12);
+
+    /* ---------- Window frame (from Hyprland look & feel) ---------- */
+    --border-active: var(--accent);
+    --border-inactive: var(--iron);
+    --border-size: 3px; /* thick iron frame */
+    --border-size-thin: 2px; /* popups / notifications */
+    --radius: 0; /* sharp corners throughout */
+    --gap-in: 6px;
+    --gap-out: 12px;
+
+    /* ---------- Effects ---------- */
+    --shadow-color: rgba(193, 18, 31, 0.4); /* accent @ ~40% */
+    --shadow: 0 0 24px var(--shadow-color);
+    --blur: 3px;
+    --dim-inactive: 0.18;
+    --bar-height: 30px;
+
+    /* ---------- Typography ---------- */
+    --font-display: "Grenze Gotisch", serif;
+    --font-mono: "JetBrainsMono Nerd Font", "JetBrains Mono", monospace;
+    --font-runes: "Noto Sans Runic", sans-serif;
+    --font-features-num: "lnum" 1, "tnum" 1; /* lining + tabular numerals for Grenze */
+}
+
+/* ---------- Optional: Wraith variant (cold spectral blue-grey) ---------- */
+:root[data-theme="wraith"] {
+    --accent: #7fa0b5;
+    --accent-tail: #3c5566;
+    --shadow-color: rgba(127, 160, 181, 0.4);
+}

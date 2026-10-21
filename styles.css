@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: serif;
+    line-height: 1.5;
+}
+
+main {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 72px 24px 48px;
+}
+
+
+h1, h2, h3, h4 {
+    margin: 0 0 6px;
+    font-family: var(--font-display);
+    font-feature-settings: var(--font-features-num);
+}
+
+h1 {
+    font-size: 2.25rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+}
+
+.rune {
+    color: var(--accent);
+    margin-right: 12px;
+}
+
+p {
+    margin: 0;
+}
+
+/* ---- LIST ---- */
+
+ul {
+    list-style: none;
+    margin: 12px 0;
+    padding: 0;
+    border-top: var(--border-size) solid var(--iron);
+
+    li {
+        border-bottom: var(--border-size) solid var(--iron);
+
+        a {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 16px;
+            padding: 16px 4px;
+            color: inherit;
+            text-decoration: none;
+
+            .name {
+                font-size: 1.3rem;
+                font-family: var(--font-display);
+            }
+        }
+
+        a:hover, a:focus-visible {
+            background: var(--bg-lighter);
+            color: var(--accent);
+        }
+
+        a:focus-visible {
+            outline: var(--border-size) solid var(--accent);
+        }
+    }
+}
