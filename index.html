@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Othala</title>
+<style>
+  :root {
+    --bg: #e8edef;
+    --surface: #f6f8f9;
+    --ink: #1d2a30;
+    --muted: #5c6c73;
+    --line: #c5d0d4;
+    --accent: #2b6b66;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141a1d;
+      --surface: #1b2326;
+      --ink: #dde6e8;
+      --muted: #8fa0a6;
+      --line: #2c383c;
+      --accent: #7fc4bc;
+      color-scheme: dark;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.5;
+  }
+  main {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 72px 24px 48px;
+  }
+  header { margin-bottom: 40px; }
+  .rune {
+    font-size: 4.5rem;
+    line-height: 1;
+    color: var(--accent);
+    margin: 0 0 12px;
+  }
+  h1 {
+    font-size: 2.25rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    margin: 0 0 6px;
+  }
+  header p { margin: 0; color: var(--muted); }
+  ul { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+  li { border-bottom: 1px solid var(--line); }
+  a {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    padding: 16px 4px;
+    color: inherit;
+    text-decoration: none;
+  }
+  a:hover, a:focus-visible { background: var(--surface); color: var(--accent); }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+  .name { font-size: 1.15rem; }
+  .desc { color: var(--muted); font-size: 0.95rem; text-align: right; }
+  footer { margin-top: 40px; color: var(--muted); font-size: 0.85rem; }
+  @media (max-width: 480px) {
+    a { flex-direction: column; gap: 2px; }
+    .desc { text-align: left; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <p class="rune" aria-hidden="true">ᛟ</p>
+    <h1>Othala</h1>
+    <p>Services running on this server.</p>
+  </header>
+
+  <ul>
+    <li><a href="http://othala:8096"><span class="name">Jellyfin</span><span class="desc">Movies and shows</span></a></li>
+    <li><a href="http://othala:8080"><span class="name">Nextcloud</span><span class="desc">Files and calendar</span></a></li>
+    <li><a href="http://othala:8123"><span class="name">Home Assistant</span><span class="desc">Smart home</span></a></li>
+    <li><a href="http://othala:9000"><span class="name">Portainer</span><span class="desc">Containers</span></a></li>
+    <li><a href="http://othala:3000"><span class="name">Grafana</span><span class="desc">Server stats</span></a></li>
+  </ul>
+
+  <footer>Edit the links in index.html to match your services.</footer>
+</main>
+</body>
+</html>
